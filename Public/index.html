@@ -1,168 +1,189 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SipLapor</title>
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-</head>
-<body>
-  <header class="navbar">
-    <div class="logo">
-      <img src="assets/SiplaporVector.svg" alt="LogoSipLapor" />
-    </div>
-    <nav class="nav-links">
-      <a href="#">Beranda</a>
-      <a href="#">Lapor</a>
-      <a href="#">Laporan Terkini</a>
-      <a href="#">Tentang</a>
-       </nav>
-      <button class="button-masuk">Masuk</button>
-</header>
-
-   <!-- Hero Section -->
-  <section class="hero">
-  <div class="hero-text">
-    <h1>Laporkan Kerusakan Infrastruktur dengan Mudah</h1>
-    <p>Bantu wujudkan infrastruktur yang lebih baik dengan melaporkan kerusakan di sekitar Anda.Bersama kita bisa membuat perubahan!</p>
-    <button class="btn-lapor">Buat Laporan</button>
-   <div class="fitur-highlight">
-  <div class="fitur-item">
-    <img src="assets/check.svg" alt="Check" class="fitur-icon" />
-    <span>Mudah digunakan</span>
-  </div>
-  <div class="fitur-item">
-    <img src="assets/check.svg" alt="Check" class="fitur-icon" />
-    <span>Respons cepat</span>
-  </div>
-  <div class="fitur-item">
-    <img src="assets/check.svg" alt="Check" class="fitur-icon" />
-    <span>Gratis</span>
-  </div>
-</div>
-  </div>
-  
-  <div class="hero-images">
-    <img src="assets/ImageJalankiriatas.jpg" class="img-atas" alt="Jalan tol dari atas">
-    <img src="assets/Pototengah.png" class="img-tengah" alt="Aplikasi di HP">
-    <img src="assets/ImageIKNKananbawah.jpg" class="img-bawah" alt="Ilustrasi jalan rusak">
-  </div>
-</section>
-
-  <!-- Laporan Terkini -->
-  <section class="laporan-terkini">
-    <h2>Laporan Terkini</h2>
-     <p>Lihat laporan infrastruktur terbaru yang telah dilaporkan oleh masyarakat</p>
-    <div class="laporan-cards">
-      <!-- Card 1 -->
-      <div class="card">
-        <img src="assets/Card 1.jpg" alt="Jalan Rusak" />
-        <h3>Jalan Berlubang di Jl. Sudirman</h3>
-        <p>Jalan berlubang membahayakan pengendara motor...</p>
-        <span class="status merah">Menunggu</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SipLapor</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#00AA13',
+              "primary-light": '#1f8f4f',
+              "primary-soft": '#eaffed'
+            },
+            fontFamily: {
+              sans: ['Roboto', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navbar -->
+    <header class="fixed z-50 top-6 left-10 right-10 bg-white border border-primary rounded-xl px-10 py-4 flex justify-between items-center shadow-md">
+      <div class="flex items-center">
+        <img src="assets/SiplaporVector.svg" alt="LogoSipLapor" class="h-10" />
       </div>
-      <!-- Card 2 -->
-      <div class="card">
-        <img src="assets/card 2.jpg" alt="Lampu Jalan" />
-        <h3>Lampu Jalan Mati di Kota Surbaya</h3>
-        <p>Lampu mati mengganggu visibilitas malam hari...</p>
-        <span class="status biru">Sedang Ditangani</span>
+      <nav class="hidden md:flex gap-8">
+        <a href="#" class="text-gray-700 font-medium hover:text-primary">Beranda</a>
+        <a href="#" class="text-gray-700 font-medium hover:text-primary">Lapor</a>
+        <a href="#" class="text-gray-700 font-medium hover:text-primary">Laporan Terkini</a>
+        <a href="#" class="text-gray-700 font-medium hover:text-primary">Tentang</a>
+      </nav>
+      <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-green-700 font-medium">Masuk</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-40 bg-primary text-white px-6 py-16 md:py-24 flex flex-col-reverse lg:flex-row items-center gap-10">
+      <div class="flex-1 space-y-4">
+        <h1 class="text-3xl md:text-4xl font-bold leading-snug">Laporkan Kerusakan Infrastruktur dengan Mudah</h1>
+        <p class="text-white/90">
+          Bantu wujudkan infrastruktur yang lebih baik dengan melaporkan kerusakan di sekitar Anda. Bersama kita bisa membuat perubahan!
+        </p>
+        <button class="bg-white text-primary font-semibold px-6 py-2 rounded hover:bg-gray-100">Buat Laporan</button>
+        <div class="flex flex-wrap gap-4 pt-6">
+          <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
+            <img src="assets/check.svg" class="w-5 h-5" /> Mudah digunakan
+          </div>
+          <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
+            <img src="assets/check.svg" class="w-5 h-5" /> Respons cepat
+          </div>
+          <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
+            <img src="assets/check.svg" class="w-5 h-5" /> Gratis
+          </div>
+        </div>
       </div>
-      <!-- Card 3 -->
-      <div class="card">
-        <img src="assets/Card 3.jpg" alt="Got Terbuka" />
-        <h3>Got Terbuka di Jl. Imam Bonjol</h3>
-        <p>Got tanpa penutup berbahaya bagi pejalan kaki...</p>
-        <span class="status hijau">Selesai diperbaiki</span>
+      <div class="flex-1 relative h-96 max-w-md">
+        <img src="assets/ImageJalankiriatas.jpg" class="absolute top-0 left-0 w-28 rotate-[-10deg] rounded shadow-lg" />
+        <img src="assets/Pototengah.png" class="absolute top-12 left-20 w-44 z-10 rounded shadow-lg" />
+        <img src="assets/ImageIKNKananbawah.jpg" class="absolute bottom-0 right-0 w-28 rotate-12 rounded shadow-lg" />
       </div>
+    </section>
+
+ <!-- Laporan Terkini -->
+    <section class="px-6 py-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Laporan Terkini</h2>
+      <p class="text-center text-gray-600 max-w-xl mx-auto">Lihat laporan infrastruktur terbaru yang telah dilaporkan oleh masyarakat</p>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-4">
+          <img src="assets/Card 1.jpg" alt="Jalan Rusak" class="rounded-lg mb-3 w-full" />
+          <h3 class="font-semibold text-lg">Jalan Berlubang di Jl. Sudirman</h3>
+          <p class="text-sm text-gray-600">Jalan berlubang membahayakan pengendara motor...</p>
+          <span class="inline-block mt-2 px-3 py-1 text-sm bg-red-100 text-red-700 rounded-full">Menunggu</span>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-4">
+          <img src="assets/card 2.jpg" alt="Lampu Jalan" class="rounded-lg mb-3 w-full" />
+          <h3 class="font-semibold text-lg">Lampu Jalan Mati di Kota Surabaya</h3>
+          <p class="text-sm text-gray-600">Lampu mati mengganggu visibilitas malam hari...</p>
+          <span class="inline-block mt-2 px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">Sedang Ditangani</span>
+        </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden p-4">
+          <img src="assets/Card 3.jpg" alt="Got Terbuka" class="rounded-lg mb-3 w-full" />
+          <h3 class="font-semibold text-lg">Got Terbuka di Jl. Imam Bonjol</h3>
+          <p class="text-sm text-gray-600">Got tanpa penutup berbahaya bagi pejalan kaki...</p>
+          <span class="inline-block mt-2 px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">Selesai diperbaiki</span>
+        </div>
+      </div>
+    </section>
+
+   <!-- Form Laporan -->
+<section class="bg-gradient-to-b from-green-50 to-white py-16 px-6">
+  <div class="max-w-3xl mx-auto text-center mb-10">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">Buat Laporan dengan Mudah</h2>
+    <p class="text-gray-600">Cukup ambil foto, tambahkan deskripsi singkat, dan sistem kami akan otomatis mendeteksi lokasi dan mengkategorikan laporan Anda.</p>
   </div>
-  </section>
-
-  <!-- Form Laporan -->
- <section class="form-section">
-  <h2>Buat Laporan dengan Mudah</h2>
-  <p>
-    Cukup ambil foto, tambahkan deskripsi singkat, dan sistem kami akan secara otomatis mendeteksi lokasi dan mengkategorikan laporan Anda.
-  </p>
-
-  <div class="form-container">
-    <h3>Form Laporan</h3>
-    <p>Ikuti langkah-langkah berikut untuk melaporkan kerusakan infrastruktur</p>
-
-    <form>
+  <div class="bg-white p-6 rounded-xl shadow-md max-w-3xl mx-auto">
+    <h3 class="text-xl font-semibold mb-1">Form Laporan</h3>
+    <p class="text-sm text-gray-500 mb-6">Ikuti langkah-langkah berikut untuk melaporkan kerusakan infrastruktur</p>
+    <form class="space-y-5">
       <!-- Kategori -->
-      <label for="kategori">Kategori Kerusakan*</label>
-      <select id="kategori" required>
-        <option selected disabled>Pilih Kategori</option>
-        <option>Jalan Rusak</option>
-        <option>Banjir</option>
-        <option>Jembatan</option>
-      </select>
-
+      <div>
+        <label for="kategori" class="block font-medium mb-1">Kategori Kerusakan*</label>
+        <select id="kategori" required class="w-full border border-gray-300 rounded-lg p-3">
+          <option selected disabled>Pilih Kategori</option>
+          <option>Jalan Rusak</option>
+          <option>Banjir</option>
+          <option>Jembatan</option>
+        </select>
+      </div>
       <!-- Deskripsi -->
-      <label for="deskripsi">Deskripsi*</label>
-      <textarea id="deskripsi" placeholder="Contoh: Jalan berlubang dengan diameter sekitar 50cm dan kedalaman 10cm, menyebabkan kendaraan harus menghindari area tersebut" required></textarea>
-
+      <div>
+        <label for="deskripsi" class="block font-medium mb-1">Deskripsi*</label>
+        <textarea id="deskripsi" required class="w-full border border-gray-300 rounded-lg p-3 min-h-[100px] resize-y" placeholder="Contoh: Jalan berlubang dengan diameter sekitar 50cm..."></textarea>
+      </div>
       <!-- Upload Foto -->
-      <label>Unggah Foto*</label>
-      <div class="upload-box">
-        <img src="assets/Uploadpoto.svg" alt="Upload Icon" />
-        <p>Klik untuk unggah atau seret foto ke sini</p>
-        <small>Format: JPG, PNG, HEIC (Maks. 10MB)</small>
+      <div>
+        <label class="block font-medium mb-1">Unggah Foto*</label>
+        <div class="border-2 border-dashed border-gray-300 rounded-lg text-center p-6">
+          <img src="assets/Uploadpoto.svg" alt="Upload Icon" class="mx-auto mb-2 w-10">
+          <p class="font-medium text-gray-700">Klik untuk unggah atau seret foto ke sini</p>
+          <small class="text-gray-500 block mt-1">Format: JPG, PNG, HEIC (maks. 10MB)</small>
+        </div>
       </div>
-
-      <!-- Peta Lokasi -->
-      <label>Lokasi Kerusakan*</label>
-      <div class="map-box">
-        <img src="Googlemap.png" alt="Peta Lokasi" />
+      <!-- Lokasi Kerusakan -->
+      <div>
+        <label class="block font-medium mb-1">Lokasi Kerusakan*</label>
+        <img src="Googlemap.png" alt="Peta Lokasi" class="w-full h-52 object-cover rounded-lg mb-3">
+        <button type="button" class="flex items-center gap-2 text-sm bg-primary-soft text-primary-light px-4 py-2 rounded-md">
+          <img src="map-pin-house.svg" alt="Loc Icon" class="h-5" /> Gunakan Lokasi Saat ini
+        </button>
       </div>
-      <button type="button" class="btn-lokasi">
-        <img src="map-pin-house.svg" alt="Loc Icon" /> Gunakan Lokasi Saat ini
-      </button>
-
       <!-- Alamat -->
-      <label for="alamat">Alamat Lengkap*</label>
-      <input type="text" id="alamat" placeholder="Lokasi Anda saat ini..." required />
-
+      <div>
+        <label for="alamat" class="block font-medium mb-1">Alamat Lengkap*</label>
+        <input type="text" id="alamat" required class="w-full border border-gray-300 rounded-lg p-3" placeholder="Lokasi Anda saat ini...">
+      </div>
       <!-- Submit -->
-      <button type="submit" class="btn-lanjut">Lanjutkan</button>
+      <div class="text-right">
+        <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700">Lanjutkan</button>
+      </div>
     </form>
   </div>
 </section>
-  <!-- Footer -->
-  <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-left">
-      <img src="Siplaporberanda.svg" alt="SipLapor Logo" class="logo" />
-      <p>
-        Platform pelaporan infrastruktur yang menghubungkan masyarakat dengan
-        pemerintah untuk perbaikan yang lebih cepat dan efisien.
-      </p>
-    </div>
 
-    <div class="footer-right">
-      <p>
-        <img src="icon-location.svg" class="icon" />
-        Jl. Kemang Timur No.1, RT.14/RW. 8, Pejaten Bar., Ps. Minggu,<br />
-        Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12510
-      </p>
-      <p><img src="icon-email.svg" class="icon" />
-        
-        info@siplapor.id
-      </p>
-    </div>
-  </div>
 
-  <div class="footer-bottom">
-    <span>© 2025 SipLapor Hak Cipta Dilindungi.</span>
-    <div class="social-icons">
-      <a href="#"><img src="icon-facebook.svg" alt="Facebook" /></a>
-      <a href="#"><img src="icon-x.svg" alt="Twitter/X" /></a>
-      <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
-    </div>
-  </div>
-</footer>
- 
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white px-6 py-8">
+      <div class="flex flex-col md:flex-row justify-between gap-6">
+        <div class="flex-1">
+          <img src="Siplaporberanda.svg" alt="SipLapor Logo" class="h-10 mb-2" />
+          <p>
+            Platform pelaporan infrastruktur yang menghubungkan masyarakat dengan pemerintah untuk perbaikan yang lebih cepat dan efisien.
+          </p>
+        </div>
+        <div class="flex-1">
+          <p class="flex items-start gap-2">
+            <img src="icon-location.svg" class="h-5 mt-1" />
+            Jl. Kemang Timur No.1, RT.14/RW. 8, Pejaten Bar., Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12510
+          </p>
+          <p class="flex items-center gap-2 mt-2">
+            <img src="icon-email.svg" class="h-5" /> info@siplapor.id
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center">
+        <span>© 2025 SipLapor Hak Cipta Dilindungi.</span>
+        <div class="flex gap-4 mt-2 md:mt-0">
+          <a href="#"><img src="icon-facebook.svg" alt="Facebook" class="h-5" /></a>
+          <a href="#"><img src="icon-x.svg" alt="Twitter/X" class="h-5" /></a>
+          <a href="#"><img src="instagram.svg" alt="Instagram" class="h-5" /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
