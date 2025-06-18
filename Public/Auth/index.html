@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SipLapor - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar
+  <header class="flex justify-between items-center px-12 py-4 border border-[#41C588] bg-white shadow-md rounded-[19px] mx-12 mt-6">
+    <div class="w-44 h-10">
+      <img src="../assets/SiplaporVector.svg" alt="LogoSipLapor" class="h-full object-contain" />
+    </div>
+    <nav class="flex gap-8 absolute left-1/2 transform -translate-x-1/2">
+      <a href="#" class="text-gray-600 hover:text-[#00AA13] font-medium">Beranda</a>
+      <a href="#" class="text-gray-600 hover:text-[#00AA13] font-medium">Lapor</a>
+      <a href="#" class="text-gray-600 hover:text-[#00AA13] font-medium">Laporan Terkini</a>
+      <a href="#" class="text-gray-600 hover:text-[#00AA13] font-medium">Tentang</a>
+    </nav>
+    <button class="bg-[#00AA13] text-white font-medium px-5 py-2 rounded-md hover:bg-green-700">Masuk</button>
+  </header> -->
+
+  <!-- Login Page Layout -->
+  <main class="flex min-h-screen">
+    <!-- Kiri: Gambar -->
+    <div class="flex-1 flex justify-center items-center">
+      <img src="../assets/Poto Beranda.jpg" alt="Mockup Aplikasi" class="w-full max-w-3xl">
+    </div>
+
+    <!-- Kanan: Form Login -->
+     <div class="w-1/2 relative flex flex-col items-center justify-center text-center px-8">
+    <!-- Tombol kembali -->
+       <div class="absolute top-6 left-6 text-green-700 top-10 right-50 text-xl p-4 py-1 bg-white bg-opacity-30 rounded-lg border-2 border-green-700 hover:bg-green-700 hover:text-white"><a href="../index.html" class="opacity-100">&lt; kembali</a></div>
+      <img src="../assets/LogoSipLapor.png" alt="Logo" class="w-12 mb-4">
+      <h1 class="text-2xl font-bold mb-2">Selamat Datang di <span class="text-[#00AA13]">SipLapor</span></h1>
+      <p>Silahkan masuk untuk melakukan pelaporan</p>
+
+      <button class="mt-6 px-5 py-3 border border-gray-300 rounded-lg bg-white text-gray-800 flex items-center gap-2 text-base shadow-sm hover:bg-gray-50">
+        <img src="../assets/Social icon.svg" alt="G" class="w-5 h-5" />
+        Masuk dengan Google
+      </button>
+
+      <p class="text-sm text-gray-600 mt-4">
+        Dengan masuk saya menyetujui
+        <a href="#" class="text-[#00AA13] underline">Ketentuan Penggunaan</a>
+        dan
+        <a href="#" class="text-[#00AA13] underline">Kebijakan Privasi</a>
+      </p>
+    </div>
+  </main>
+</body>
+</html>

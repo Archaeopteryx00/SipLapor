@@ -35,9 +35,9 @@
   </head>
   <body class="bg-white text-gray-800 font-sans">
     <!-- Navbar -->
-    <header class="fixed z-50 top-6 left-10 right-10 bg-white border border-primary rounded-xl px-10 py-4 flex justify-between items-center shadow-md">
+    <header class="fixed z-50 top-6 left-10 right-10 bg-white border border-primary rounded-xl lg:px-10 px-4 py-3 flex justify-between items-center shadow-md">
       <div class="flex items-center">
-        <img src="assets/SiplaporVector.svg" alt="LogoSipLapor" class="h-10" />
+        <img src="assets/SiplaporVector.svg" alt="LogoSipLapor" class="h-6" />
       </div>
       <nav class="hidden md:flex gap-8">
         <a href="#" class="text-gray-700 font-medium hover:text-primary">Beranda</a>
@@ -45,35 +45,37 @@
         <a href="#" class="text-gray-700 font-medium hover:text-primary">Laporan Terkini</a>
         <a href="#" class="text-gray-700 font-medium hover:text-primary">Tentang</a>
       </nav>
-      <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-green-700 font-medium">Masuk</button>
+      <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-emerald-700 font-medium"><a href="Auth/index.html">Masuk</a></button>
     </header>
 
-    <!-- Hero Section -->
-    <section class="pt-40 bg-primary text-white px-6 py-16 md:py-24 flex flex-col-reverse lg:flex-row items-center gap-10">
-      <div class="flex-1 space-y-4">
-        <h1 class="text-3xl md:text-4xl font-bold leading-snug">Laporkan Kerusakan Infrastruktur dengan Mudah</h1>
-        <p class="text-white/90">
-          Bantu wujudkan infrastruktur yang lebih baik dengan melaporkan kerusakan di sekitar Anda. Bersama kita bisa membuat perubahan!
-        </p>
-        <button class="bg-white text-primary font-semibold px-6 py-2 rounded hover:bg-gray-100">Buat Laporan</button>
-        <div class="flex flex-wrap gap-4 pt-6">
-          <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
-            <img src="assets/check.svg" class="w-5 h-5" /> Mudah digunakan
-          </div>
-          <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
-            <img src="assets/check.svg" class="w-5 h-5" /> Respons cepat
-          </div>
-          <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
-            <img src="assets/check.svg" class="w-5 h-5" /> Gratis
-          </div>
-        </div>
+  <section class="pt-32 px-10 lg:pt-40 lg:px-32 lg:py-22 bg-gradient-to-r from-[#009B11] via-[#33BB42] to-[#00790D] text-white md:py-12 flex flex-col lg:flex-row items-center gap-4 lg:gap-10">
+  <!-- Kolom Kiri -->
+  <div class="flex flex-col justify-center items-start lg:gap-10 gap-4 max-w-[651px]">
+    <h1 class="text-3xl md:text-4xl font-bold leading-snug">Laporkan Kerusakan Infrastruktur dengan Mudah</h1>
+    <p class="text-white/90">
+      Bantu wujudkan infrastruktur yang lebih baik dengan melaporkan kerusakan di sekitar Anda. Bersama kita bisa membuat perubahan!
+    </p>
+    <button class="bg-white text-primary font-semibold px-6 py-2 rounded hover:green-500">Buat Laporan</button>
+
+    <div class="flex flex-wrap gap-4 pt-2">
+      <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
+        <img src="assets/check.svg" class="w-5 h-5" /> Mudah digunakan
       </div>
-      <div class="flex-1 relative h-96 max-w-md">
-        <img src="assets/ImageJalankiriatas.jpg" class="absolute top-0 left-0 w-28 rotate-[-10deg] rounded shadow-lg" />
-        <img src="assets/Pototengah.png" class="absolute top-12 left-20 w-44 z-10 rounded shadow-lg" />
-        <img src="assets/ImageIKNKananbawah.jpg" class="absolute bottom-0 right-0 w-28 rotate-12 rounded shadow-lg" />
+      <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
+        <img src="assets/check.svg" class="w-5 h-5" /> Respons cepat
       </div>
-    </section>
+      <div class="flex items-center gap-2 border border-white px-4 py-2 rounded-full text-sm font-medium">
+        <img src="assets/check.svg" class="w-5 h-5" /> Gratis
+      </div>
+    </div>
+  </div>
+
+  <!-- Kolom Kanan: 1 gambar gabungan -->
+  <div class="flex-1 flex justify-center mb-5">
+    <img src="assets/heroimage.png" alt="Ilustrasi Aplikasi" class="max-w-xs md:max-w-sm lg:max-w-md" />
+  </div>
+</section>
+
 
  <!-- Laporan Terkini -->
     <section class="px-6 py-16">
